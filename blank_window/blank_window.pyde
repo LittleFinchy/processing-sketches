@@ -1,4 +1,4 @@
-import math, random
+import random
 
 class Point:
 
@@ -11,6 +11,7 @@ class Point:
             return True
         return False
 
+total, inside = 0, 0
 
 def setup():
     size(600,600)
@@ -23,10 +24,10 @@ def draw():
     stroke(0)
     strokeWeight(2)
     point(temp_point.x, temp_point.y)
-    #if temp_point.is_in_circle():
-    #    pie.add_inside(obj)
-    #pie.add_total(Count)
-    #print(pie.total/pie.inside)
+    if temp_point.is_in_circle():
+        inside += 1
+    total += 1
+    print(total/inside)
     
     
     
